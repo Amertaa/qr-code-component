@@ -1,9 +1,10 @@
 @import "colors";
+@import "font";
 
 * {
   padding: 0;
   margin: 0;
- 
+  box-sizing: border-box;
 }
 
 img{
@@ -12,7 +13,42 @@ img{
 
 body{
     font-family: "Outfit", "sans-serif";
-    font-size: 1rem;
+    font-size: 15px;
     background-color: $lightGray;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 1px);  
+    margin: 1rem;
+}
+
+.container {
+    background-color: $white;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.8rem;
+}
+
+.container img {
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.container h1 {
+    color: $darkBlue;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container p {
+    color: $grayishBlue;
+    text-align: center; 
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 400px;
+    }
 }
